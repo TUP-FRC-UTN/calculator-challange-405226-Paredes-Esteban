@@ -1,0 +1,14 @@
+<div style="border-radius: 2px; border: solid; width: 20rem;">
+  <h1>Calculadora</h1>
+  <div>
+    <h3>Valor 1</h3>
+    <input type="number" [(ngModel)]="firstValue" name="">
+    <h3>Valor 2</h3>
+    <input type="number" [(ngModel)]="secondValue" name="">
+    <h3>Resultado</h3>
+    <input type="number" [(ngModel)]="result" name="" disabled>
+  </div>
+  <div>
+    <app-calculadora-operaciones [primerValor]="firstValue" [segundoValor]="secondValue" (resultadoSent)="changeResult($event)"></app-calculadora-operaciones>
+  </div>
+</div>
